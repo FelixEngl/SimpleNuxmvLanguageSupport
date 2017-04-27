@@ -66,7 +66,7 @@
         "controll":{
             "patterns":[
                 {
-                    "include":"#controll-structure-definition"
+                    "include":"#constrain-definitions"
                 }
             ]
         },
@@ -137,10 +137,92 @@
         },
 
 
-        "controll-structure-definition":{
-            "name": "keyword.control.nuxmv", 
-            "match": "\\b(?-i:VAR|ASSIGN|ABS|FAIRNESS|TRANS|DEFINE|MDEFINE|CONSTANTS|IVAR|INVAR|SPEC|CTLSPEC|LTLSPEC|PSLSPEC|COMPUTE|INVARSPEC|JUSTICE|COMPASSION|MODULE|ISA|CONSTRAINT|SIMPWFF|CTLWFF|LTLWFF|PSLWFF|COMPWFF|FROZENVAR|INIT|NAME|IN|MIN|MAX|MIRROR|PRED|PREDICATES|case|esac)\\b"
+        "constrain-definitions":{
+            "patterns":[
+                {
+                    "include":"#other-definitions"
+                }, 
+                {
+                    "include":"#fairness-definition"
+                },
+                {
+                    "include":"#switch-case-definition"
+                },
+                {
+                    "include":"#variable-definition"
+                },
+                {
+                    "include":"#define-definition"
+                },
+                {
+                    "include":"#function-definition"
+                },
+                {
+                    "include":"#module-definition"
+                },
+                {
+                    "include":"#compute-definition"
+                },
+                {
+                    "include":"#assign-definition"
+                },
+                {
+                    "include":"#spec-definition"
+                }
+            ]
         },
+
+        "other-definitions":{
+            "name": "keyword.control.nuxmv", 
+            "match": "\\b(?-i:ISA|CONSTRAINT|SIMPWFF|CTLWFF|LTLWFF|PSLWFF|COMPWFF|NAME|IN|MIRROR|PRED|PREDICATES)\\b"
+        },
+
+        "spec-definition":{
+            "name": "keyword.control.nuxmv", 
+            "match": "\\b(?-i:SPEC|CTLSPEC|LTLSPEC|PSLSPEC)\\b"
+        },
+
+         "assign-definition":{
+            "name": "keyword.control.nuxmv", 
+            "match": "\\b(?-i:ASSIGN|TRANS|INVAR|INIT)\\b"
+        },
+
+        "compute-definition":{
+            "name": "keyword.control.nuxmv", 
+            "match": "\\b(?-i:ABS|COMPUTE|MIN|MAX)\\b"
+        },
+
+        "module-definition":{
+            "name": "keyword.control.nuxmv", 
+            "match": "\\b(?-i:MODULE)\\b"
+        },
+
+        "fairness-definition":{
+            "name": "keyword.control.nuxmv", 
+            "match": "\\b(?-i:FAIRNESS|JUSTICE|COMPASSION)\\b"
+        },
+
+        "switch-case-definition":{
+            "name": "keyword.control.case.nuxmv", 
+            "match": "\\b(?-i:case|esac)\\b"
+        },
+
+        "variable-definition":{
+            "name": "keyword.control.nuxmv", 
+            "match": "\\b(?-i:VAR|IVAR|INVARSPEC|FROZENVAR)\\b"
+        },
+
+        "define-definition":{
+            "name": "keyword.control.nuxmv", 
+            "match": "\\b(?-i:CONSTANTS|DEFINE|MDEFINE)\\b"
+        },
+
+        "function-definition":{
+            "name": "keyword.control.nuxmv", 
+            "match": "\\b(?-i:FUN)\\b"
+        },
+
+
 
         "single-line-comment-definition":{
             "begin": "--", 
@@ -167,11 +249,11 @@
             "match": "\\b(?-i:init|next)\\b"
         },
         "bool-definition":{
-            "name": "constant.character.nuxmv", 
+            "name": "constant.language.nuxmv", 
             "match": "\\b(?-i:TRUE|FALSE)\\b"
         },
         "self-definition":{
-            "name": "constant.character.nuxmv", 
+            "name": "constant.language.nuxmv", 
             "match": "\\b(?-i:self)\\b"
         },
         
@@ -231,9 +313,10 @@
             "name": "support.function.nuxmv", 
             "match": "\\b(?-i:X|G|F|V|Y|Z|H|O|S|T)\\b"
         },
+        
         "base-function-definition":{
             "name": "support.function.nuxmv", 
-            "match": "\\b(?-i:count|toint|resize|select|floor)\\b"
+            "match": "\\b(?-i:abs|min|max|count|toint|resize|select|floor)\\b"
         },
         "deprecated-function-definition":{
             "name":"support.function.nuxmv",

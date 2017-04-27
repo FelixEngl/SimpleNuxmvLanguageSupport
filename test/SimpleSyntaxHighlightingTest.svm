@@ -22,10 +22,11 @@ EBF ABF EBG ABG BU
 
 controll-structure-definition
 VAR ASSIGN ABS FAIRNESS TRANS DEFINE MDEFINE
+FROZENVAR INIT NAME IN MIN MAX MIRROR PRED PREDICATES
 CONSTANTS IVAR INVAR SPEC CTLSPEC LTLSPEC PSLSPEC
 COMPUTE INVARSPEC JUSTICE COMPASSION MODULE ISA
 CONSTRAINT SIMPWFF CTLWFF LTLWFF PSLWFF COMPWFF
-FROZENVAR INIT NAME IN MIN MAX MIRROR PRED PREDICATES
+FUN
 case esac
 
 single-line-comment-definition
@@ -68,7 +69,7 @@ ltl-function-definition
 X G F V Y Z H O S T
 
 base-function-definition
-count toint resize select floor
+count toint resize select floor abs min max
 
 deprecated-function-definition
 process
