@@ -1,0 +1,27 @@
+{
+    "name": "nuxmvlangsupport",
+    "displayName": "Simple nuXmv Language Support",
+    "description": "Simple nuXmv Language Support for Visual Studio Code",
+    "version": "0.1.0",
+    "publisher": "felixengl",
+    "engines": {
+        "vscode": "^1.11.0"
+    },
+    "categories": [
+        "Languages"
+    ],
+    "license": "SEE LICENSE IN LICENSE.txt",
+    "contributes": {
+        "languages": [{
+            "id": "nuxmv",
+            "aliases": ["nuXmv", "nuxmv"],
+            "extensions": [".smv"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "nuxmv",
+            "scopeName": "source.nuxmv",
+            "path": "./syntaxes/nuXmv.tmLanguage.json"
+        }]
+    }
+}

@@ -1,0 +1,249 @@
+{
+    "patterns": [
+        {
+            "include":"#types"
+        },{
+            "include":"#functions"
+        },{
+            "include":"#controll"
+        },{
+            "include":"#comments"
+        },        
+        {
+            "name": "variable.other.nuxmv", 
+            "match": "(\\$)[a-zA-Z_][a-zA-Z0-9_]*"
+        }
+    ], 
+
+    "repository": {
+        "types":{
+            "patterns":[
+                {
+                    "include":"#numbers-definitions"
+                },{
+                    "include":"#constants-definitions"
+                },{
+                    "include":"#string-definition"
+                },{
+                    "include":"#datatypes-definitions"
+                }
+            ]
+        },
+        "comments":{
+            "patterns":[
+                {
+                    "include":"#single-line-comment-definition"
+                },{
+                    "include":"#multi-line-comment-definition"
+                }
+            ]
+        },
+        "functions":{
+            "patterns":[
+                {
+                    "include":"#state-function-definition"
+                },
+                {
+                    "include":"#operator-definitions"
+                },
+                {
+                    "include":"#real-time-clt-function-definition"
+                },
+                {
+                    "include":"#ltl-function-definition"
+                },
+                {
+                    "include":"#clt-function-definition"
+                },
+                {
+                    "include":"#base-function-definition"
+                },
+                {
+                    "include":"#deprecated-function-definition"
+                }
+            ]
+        },
+        "controll":{
+            "patterns":[
+                {
+                    "include":"#controll-structure-definition"
+                }
+            ]
+        },
+        
+
+        "constants-definitions":{
+            "patterns":[
+                {
+                    "include":"#bool-definition"
+                }, {
+                    "include":"#self-definition"
+                }
+            ]
+        },
+        "numbers-definitions":{
+            "patterns":[
+                {
+                    "name": "constant.numeric.decimal.nuxmv",
+                    "match": "\\b[0-9_]+\\.[0-9_]+((e|E)[0-9]+)?\\b"
+                },
+                {
+                    "name":"constant.numeric.decimal.nuxmv",
+                    "match":"\\b[0-9_]+\\b"
+                }
+            ]
+        },
+
+
+        "string-definition":{
+            "endCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.end.nuxmv"
+                }
+            }, 
+            "begin": "\"", 
+            "end": "\"", 
+            "name": "string.quoted.double.nuxmv", 
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.string.begin.nuxmv"
+                }
+            }
+        },
+
+        "operator-definitions":{
+            "patterns":[
+                {
+                    "include":"#character-based-operator-definition"
+                },{
+                    "include":"#symbol-based-operator-definition"
+                } 
+            ]
+        },
+
+        "character-based-operator-definition":{
+            "name":"keyword.operator.nuxmv",
+            "match":"\\b(?-i:union|in|xor|xnor|mod)\\b"
+        },
+
+        "symbol-based-operator-definition":{
+            "name":"keyword.operator.nuxmv",
+            "match":"\\b(?-i:&| /| | /+ |-| /* |//|>>|<<|>=|<=|<|>|<->|->|!| /? |%|=|!=|==|::)\\b"
+        },
+
+        "real-time-clt-function-definition":{
+            "name": "support.function.nuxmv", 
+            "match": "\\b(?-i:EBF|ABF|EBG|ABG|BU)\\b"
+        },
+
+
+        "controll-structure-definition":{
+            "name": "keyword.control.nuxmv", 
+            "match": "\\b(?-i:VAR|ASSIGN|ABS|FAIRNESS|TRANS|DEFINE|MDEFINE|CONSTANTS|IVAR|INVAR|SPEC|CTLSPEC|LTLSPEC|PSLSPEC|COMPUTE|INVARSPEC|JUSTICE|COMPASSION|MODULE|ISA|CONSTRAINT|SIMPWFF|CTLWFF|LTLWFF|PSLWFF|COMPWFF|FROZENVAR|INIT|NAME|IN|MIN|MAX|MIRROR|PRED|PREDICATES|case|esac)\\b"
+        },
+
+        "single-line-comment-definition":{
+            "begin": "--", 
+            "end": "$\\n?", 
+            "name": "comment.line.nuxmv", 
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.comment.nuxmv"
+                }
+            }
+        },
+        "multi-line-comment-definition":{
+            "begin": "/--", 
+            "end": "--/", 
+            "name": "comment.line.nuxmv", 
+            "beginCaptures": {
+                "0": {
+                    "name": "punctuation.definition.comment.nuxmv"
+                }
+            }
+        },
+        "state-function-definition":{
+            "name": "entity.name.function.nuxmv", 
+            "match": "\\b(?-i:init|next)\\b"
+        },
+        "bool-definition":{
+            "name": "constant.character.nuxmv", 
+            "match": "\\b(?-i:TRUE|FALSE)\\b"
+        },
+        "self-definition":{
+            "name": "constant.character.nuxmv", 
+            "match": "\\b(?-i:self)\\b"
+        },
+        
+        "datatypes-definitions":{
+            "patterns":[
+                {
+                    "include":"#primitives-definition"
+                },
+                {
+                    "include":"#array-definition"
+                },
+                {
+                    "include":"#signedness-definition"
+                },
+                {
+                    "include":"#extend-definition"
+                },
+                {
+                    "include":"#special-operators-definition"
+                } 
+            ]
+        },
+
+        "primitives-definition":{
+            "name": "storage.type.nuxmv", 
+            "match": "\\b(?-i:boolean|integer|real|word|word1|bool)\\b"
+        },
+
+        "array-definition":{
+            "name": "storage.type.nuxmv", 
+            "match": "\\b(?-i:array|of)\\b"
+        },
+        
+        "signedness-definition":{
+            "name": "storage.type.nuxmv", 
+            "match": "\\b(?-i:signed|unsigned)\\b"
+        },
+
+         "extend-definition":{
+            "name": "storage.type.nuxmv", 
+            "match": "\\b(?-i:extend)\\b"
+        },
+
+         "special-operators-definition":{
+            "name": "storage.type.nuxmv", 
+            "match": "\\b(?-i:sizeof|uwconst|swconst)\\b"
+        },
+
+
+
+        "clt-function-definition":{
+            "name": "support.function.nuxmv", 
+            "match": "\\b(?-i:EX|A|E|U|AX|EF|AF|EG|AG)\\b"
+        },
+
+        "ltl-function-definition":{
+            "name": "support.function.nuxmv", 
+            "match": "\\b(?-i:X|G|F|V|Y|Z|H|O|S|T)\\b"
+        },
+        "base-function-definition":{
+            "name": "support.function.nuxmv", 
+            "match": "\\b(?-i:count|toint|resize|select|floor)\\b"
+        },
+        "deprecated-function-definition":{
+            "name":"support.function.nuxmv",
+            "match":"\\b(?-i:process)\\b"
+        }
+    },
+
+    "fileTypes": [
+        "smv"
+    ], 
+    "scopeName": "source.nuxmv", 
+    "name": "nuxmv"
+}

@@ -1,0 +1,74 @@
+This File contains just testdata for syntax highlighting.
+
+string-definition
+"This is a string"
+
+numbers-definitions (int)
+123154546523453762
+
+numbers-definitions (real)
+121545214324.657435346325
+21315123.435243E31
+4322.4356436e543
+
+symbol-based-operator-definition
+& | + - * / >> << >= <= < > <-> -> ! ? % = != == ::
+
+character-based-operator-definition
+union in xor xnor mod
+
+real-time-clt-function-definition
+EBF ABF EBG ABG BU
+
+controll-structure-definition
+VAR ASSIGN ABS FAIRNESS TRANS DEFINE MDEFINE
+CONSTANTS IVAR INVAR SPEC CTLSPEC LTLSPEC PSLSPEC
+COMPUTE INVARSPEC JUSTICE COMPASSION MODULE ISA
+CONSTRAINT SIMPWFF CTLWFF LTLWFF PSLWFF COMPWFF
+FROZENVAR INIT NAME IN MIN MAX MIRROR PRED PREDICATES
+case esac
+
+single-line-comment-definition
+--This is a comment
+-- This is a comment
+
+multi-line-comment-definition
+/--
+this is a comment
+--/ this is not a comment
+
+state-function-definition
+init next
+
+bool-definition
+TRUE FALSE
+
+self-definition
+self
+
+primitives-definition
+boolean integer real word word1 bool
+
+array-definition
+array of
+
+signedness-definition
+signed unsigned
+
+extend-definition
+extend
+
+special-operators-definition
+sizeof uwconst swconst
+
+clt-function-definition
+EX A E U AX EF AF EG AG
+
+ltl-function-definition
+X G F V Y Z H O S T
+
+base-function-definition
+count toint resize select floor
+
+deprecated-function-definition
+process
