@@ -3,7 +3,7 @@
     "displayName": "Simple nuXmv Language Support",
     "description": "Simple nuXmv Language Support for Visual Studio Code",
     "version": "0.1.0",
-    "publisher": "felixengl",
+    "publisher": "simplenuxmvlanguagesupport",
     "engines": {
         "vscode": "^1.11.0"
     },
