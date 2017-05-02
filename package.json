@@ -23,5 +23,13 @@
             "scopeName": "source.nuxmv",
             "path": "./syntaxes/nuXmv.tmLanguage.json"
         }]
+    },
+    "homepage": "https://github.com/FelixEngl/nuxmv/blob/master/README.md",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/FelixEngl/nuxmv.git"
+    },
+    "bugs": {
+        "url": "https://github.com/FelixEngl/nuxmv/issues"
     }
 }

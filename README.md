@@ -14,16 +14,21 @@ Welcome to the Simple nuXmv Language Support extension for Visual Studio Code.
 ### Known Bugs
 ------
 
-### Next Milestone
-Publish to: https://marketplace.visualstudio.com/
+### Next Milestone (unkown release date)
+- Source Code Snippets
+- recognizion of fractional reals
 
-### Missing Minor Features (no milestones set)
-- no recognizion of fractional reals
+### Missing Minor Features
+- recognizion of fractional reals
 
-### Missing Major Features (no milestones set)
+### Missing Major Features
 - Source Code Snippets
 - Show Hovers
 - Code Completion Proposals
 
+## Maintainers
+
+- [Felix Engl](https://github.com/FelixEngl)
+
 ### License
-The Simple nuXmv Language Support extension is subject to [these license terms]().
+The Simple nuXmv Language Support extension is subject to [these license terms](https://github.com/FelixEngl/nuxmv/blob/master/LICENCE.txt).
