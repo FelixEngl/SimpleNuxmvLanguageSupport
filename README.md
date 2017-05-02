@@ -31,4 +31,4 @@ Welcome to the Simple nuXmv Language Support extension for Visual Studio Code.
 - [Felix Engl](https://github.com/FelixEngl)
 
 ### License
-The Simple nuXmv Language Support extension is subject to [these license terms](https://github.com/FelixEngl/nuxmv/blob/master/LICENCE.txt).
+The Simple nuXmv Language Support extension is subject to [these license terms](https://github.com/FelixEngl/SimpleNuxmvLanguageSupport/blob/master/LICENCE.txt).

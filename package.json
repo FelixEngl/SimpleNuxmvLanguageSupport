@@ -24,12 +24,12 @@
             "path": "./syntaxes/nuXmv.tmLanguage.json"
         }]
     },
-    "homepage": "https://github.com/FelixEngl/nuxmv/blob/master/README.md",
+    "homepage": "https://github.com/FelixEngl/SimpleNuxmvLanguageSupport/blob/master/README.md",
     "repository": {
         "type": "git",
-        "url": "https://github.com/FelixEngl/nuxmv.git"
+        "url": "https://github.com/FelixEngl/SimpleNuxmvLanguageSupport.git"
     },
     "bugs": {
-        "url": "https://github.com/FelixEngl/nuxmv/issues"
+        "url": "https://github.com/FelixEngl/SimpleNuxmvLanguageSupport/issues"
     }
 }
