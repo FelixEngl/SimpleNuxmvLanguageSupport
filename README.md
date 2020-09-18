@@ -1,3 +1,5 @@
+# Discontinued
+
 # nuxmv README
 
 Welcome to the Simple nuXmv Language Support extension for Visual Studio Code.
